@@ -10,7 +10,7 @@ const users = [
     user1,
     user2,
 ]
-test('Debe contener un usuario', () => {
+test('expect.arrayContaining, Debe contener un usuario', () => {
     expect(users).toEqual(expect.arrayContaining([
         expect.objectContaining(user1),
     ]));
@@ -32,7 +32,7 @@ class User  {
     render() {
         return `<div>
                 <h1>${this.name}</h1>
-                <p>${this.age}</p>
+                <h2>${this.age}</h2>
             </div>`
     }
 }

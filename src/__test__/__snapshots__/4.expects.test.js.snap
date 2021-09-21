@@ -3,6 +3,6 @@
 exports[`renderea correactamente 1`] = `
 "<div>
                 <h1>John</h1>
-                <p>30</p>
+                <h2>30</h2>
             </div>"
 `;

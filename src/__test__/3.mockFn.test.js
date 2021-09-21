@@ -1,4 +1,5 @@
 /**
+ * jest.fn();
  * Son tambien conocidas como espias, porque te permiten espiar el comportamiento de una funcion.
  */
 
@@ -26,7 +27,7 @@ test('Debe llamar a la funcion spy con ciertos parametros', () => {
 
 test('Debe mockear las respuestas de la funcion', () => {
     const myMockFn = jest
-        .fn(() => 'default')
+        .fn(() => 'default') //.mockImplementation(() => 'default')
         .mockImplementationOnce(() => 'first call')
         .mockImplementationOnce(() => 'second call');
 
