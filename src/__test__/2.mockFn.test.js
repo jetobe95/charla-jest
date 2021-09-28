@@ -1,6 +1,6 @@
 /**
- * jest.fn();
- * Son tambien conocidas como espias, porque te permiten espiar el comportamiento de una funcion.
+ * * jest.fn();
+ * * Son tambien conocidas como espias, porque te permiten espiar el comportamiento de una funcion.
  */
 
 function forEach(items, callback) {

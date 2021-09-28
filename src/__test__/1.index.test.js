@@ -1,31 +1,33 @@
 /*
     Jeffrey Torres Bello
     Desarrollador: React y Flutter
-    Estoy en Pragma desde hace 3 meses 
+    Estoy en Pragma desde hace 4 meses 
 */
 
 // Pruebas unitarias
-/// ¿han usado jest?
 // ¿Por que hacer pruebas unitarias?
 /*
 
 
- Ventajas de hacer pruebas 
- - Asegurar que nuestro codigo coincida con los requisitos de desarrollo
- - Reduce los errores
- - Ayuda a mejorar la capacidad de mantenimiento
+Ventajas de hacer pruebas 
+- Asegurar que nuestro codigo coincida con los requisitos de desarrollo
+- Reduce los errores
+- Ayuda a mejorar la capacidad de mantenimiento
 
- Contras:
- - Requiere de una esfuerzo adicional para mantener las pruebas
+Contras:
+- Requiere de una esfuerzo adicional para mantener las pruebas
 
- Hay dos opciones:
- - Pruebas manuales: una persona encargada de hacer pruebas manualmente
+Hay dos opciones:
+- Pruebas manuales: una persona encargada de hacer pruebas manualmente
+- Prueba automaticas: Jest 
 */
 
+/// ¿han usado jest?
 /*
- *   ! En Jest tenemos Matchers o comparadors
+ *   ! En Jest tenemos Matchers o comparators
      * 1. el llamado a la funcion expect(2+2)  retorna un objeto expectation, que contiene comparadores(Matchers)
-     * 2. .toBe(4), jest rastrea todos los comparadores que fallan para que pueda imprimir mensajes de error agradables para usted. 
+     * 2. .toBe(4), jest rastrea todos los comparadores que fallan para 
+     * que pueda imprimir mensajes de error agradable. 
      * 
      * Tipos de Comparadores
      * 1. Veracidad (Truthiness)
@@ -45,26 +47,16 @@
     
  */
 
-test('Describir que va a pasar, ej: Al sumar 2 + 2 debe ser 4', () => {
+
+/**
+ * * Estrucura de un test
+ */
+
+test('Describir que debe pasar, ej: Al sumar 2 + 2 debe ser 4', () => {
     expect(2 + 2).toBe(4)
-    // console.log(expect)
 })
 
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// * Luego ejecutamos en la termina npm test
 
 
 
@@ -74,19 +66,16 @@ test('Mayor que', () => {
 });
 
 
+const frutas = ['piña','manzana','banana']
+
+test('Debe contener una banana ', () => {
+    expect(frutas).toContain('banana')
+})
 
 
 
 
-
-
-
-
-
-
-
-
-test('Verdadero y Falso', () => {
+test('ejemplo: Verdadero y Falso', () => {
     expect(true).toBeTruthy()
     expect(false).toBeFalsy()
 })
@@ -99,16 +88,16 @@ test('Verdadero y Falso', () => {
 /// Ej funcion externa
 const reverseString = require('../index')
 
-test('reverseString', () => {
+test('Debe colocar el texto alreves', () => {
     const textReverse = reverseString('Pragma')
-    expect(textReverse).toBe('amgarP')
+    expect(textReverse).toMatch('amgarP')
 })
 
 
 
 
 
-/// Afirmaciones con objectos
+/// * Afirmaciones con objetos
 const user = {
     name: 'Pragma',
     age: 25,
@@ -116,8 +105,8 @@ const user = {
 }
 
 
-// toEqual compara de manera de recursiva las propiedad de las instancia de objetos
-// llama Object.is para comparar valores primitivos
+// * toEqual compara de manera de recursiva las propiedad de las instancia de los objetos
+// * llama Object.is para comparar valores primitivos
 test('Debe tener un nombre', () => {
     const clone = {
         name: 'Pragma',
@@ -128,7 +117,7 @@ test('Debe tener un nombre', () => {
     expect(user).toEqual(clone)
 
     
-    // Aca .toBe compara que el sea la misma referencia al objecto
+    // Aca .toBe compara que el sea la misma referencia al objeto
     expect(user).not.toBe(clone)
 
 
