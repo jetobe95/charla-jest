@@ -1,6 +1,6 @@
 /**
  * * jest.fn();
- * * Son tambien conocidas como espias, porque te permiten espiar el comportamiento de una funcion.
+ * * Te permiten espiar el comportamiento de una funcion.
  */
 
 function forEach(items, callback) {
@@ -19,7 +19,7 @@ test('Debe llamar a la funcion spy con ciertos parametros', () => {
     expect(spy).toBeCalledWith(1);
 
 
-    // la propiedad .mock de spy almacena ¿como fue llamada? y ¿con que parametros?
+    // la propiedad .mock del jest.fn()  almacena ¿como fue llamada? y ¿con que parametros?
     expect(spy.mock.calls.length).toBe(2);
     expect(spy).toBeCalledTimes(2);
 

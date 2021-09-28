@@ -1,16 +1,17 @@
 /*
     Jeffrey Torres Bello
+    Ingeniero Electrónico
     Desarrollador: React y Flutter
     Estoy en Pragma desde hace 4 meses 
 */
 
-// Pruebas unitarias
-// ¿Por que hacer pruebas unitarias?
+//* Pruebas unitarias
+//* ¿Por que hacer pruebas unitarias?
 /*
 
 
 Ventajas de hacer pruebas 
-- Asegurar que nuestro codigo coincida con los requisitos de desarrollo
+- Asegurar que nuestro código coincida con los requisitos de desarrollo
 - Reduce los errores
 - Ayuda a mejorar la capacidad de mantenimiento
 
@@ -22,8 +23,12 @@ Hay dos opciones:
 - Prueba automaticas: Jest 
 */
 
-/// ¿han usado jest?
+///* ¿Han usado jest?
 /*
+*   Jest un framework  de JavaScript Testing creado por Facebook
+*   Funciona para proyectos como: Babel, TypeScript, Node, React, Angular, Vue y mas!
+
+
  *   ! En Jest tenemos Matchers o comparators
      * 1. el llamado a la funcion expect(2+2)  retorna un objeto expectation, que contiene comparadores(Matchers)
      * 2. .toBe(4), jest rastrea todos los comparadores que fallan para 

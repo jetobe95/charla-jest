@@ -1,3 +1,17 @@
+// * Objeto expect
+/**
+ * 
+    * * expect.anything()
+    * * expect.any(constructor)
+    * * expect.arrayContaining(array)
+    * * expect.assertions(number)
+    * * expect.hasAssertions()
+    * * expect.not.arrayContaining(array)
+    * * expect.not.objectContaining(object)
+    * * expect.not.stringContaining(string)
+    * ! y mas!
+ */
+
 const user1 = {
     name: 'John',
     age: 30,
@@ -50,13 +64,14 @@ test('expect.any', () => {
 
 
 
-/// Snapshot testing
-/// utiles para comprobar que una UI no cambia de forma inesperada
+///! Snapshot testing
+/// * utiles para comprobar que una UI no cambia de forma inesperada
 test('renderea correactamente', () => {
     const user = new User('John', 30);
 
     expect(user.render()).toMatchSnapshot()
 
-    /// sopongamos que el dia de mañana un compañero cambia el html
+    ///*  sopongamos que el dia de mañana un compañero cambia el html 
+    // * cambiando el render()
 })
 
